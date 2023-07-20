@@ -5,7 +5,7 @@
     --secondary-color: #F3BA0A;
 
     /* typography */
-    --principal-typo: 'Helvetica neue', Arial, sans-serif;
+    --principal-typo: Arial, sans-serif;
 }
 
 /* dark mode */ 
@@ -17,7 +17,7 @@
     }
 }
 /* high contrast */
-@media (prefers-contrast: high) {
+@media (prefers-contrast: high ) {
     :root{
         --primary-color: black;
         --secondary-color: yellow;

@@ -2,8 +2,8 @@
     overflow-x: hidden;
 }
 .header{
-    /* background-color: var(--primary--color);
-    color: var(--secondary-color); */
+    background-color: var(--primary--color);
+    color: var(--secondary-color);
     position: fixed;
     top: 0;
     width: 100%;
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5rem;
+    padding: 0 4rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     backdrop-filter: blur(.4rem);
@@ -22,8 +22,8 @@
     display: flex;
     column-gap: 1.5625rem;
     text-transform: uppercase;
-    font-size: .89em;
-    font-weight: 500;
+    font-size: 1.05em;
+    font-weight: 700;
     cursor: pointer;
 }
 .header-logo{
@@ -49,7 +49,6 @@
 .link-hover:hover::before{
     opacity: 1;
     left: 0;
-    mix-blend-mode: difference;
 }
 .projects{
     position: relative;
@@ -59,7 +58,7 @@
     position: absolute;
     top: -8rem;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     object-fit: cover;
     z-index: -1;
 }
@@ -70,6 +69,13 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem 1rem;
+    animation: slideUp 1.5s ease .5s both;
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        scale: .5;
+    }
 }
 .rotated {
     transform: rotate(var(--rotation));
@@ -111,7 +117,7 @@
     cursor: pointer;
 }
 .lightbox .expanded-img{
-    margin-top: 4rem;
+    margin-top: 3rem;
     width: 100%;
     height: 90vh;
     max-height: 50rem;
@@ -124,8 +130,11 @@
     pointer-events: auto;
 }
 .section{
-    position: absolute;
+    position: relative;
+}
+.description-section{
     width: 100%;
+    height: auto;
     display: flex;
     align-items: flex-start;
     padding: 0 6rem 4rem 6rem;
@@ -142,15 +151,26 @@
     align-self: flex-end; 
     padding-top: 1.4rem;
 }
+#showreel{
+    width: 100%;
+    height: 90%;
+} 
+.showreel-video{
+    width: 100%;
+}
+footer{
+    height: 20vh;
+    width: 100%;
+}
 
 @media (max-width: 76rem) {
     .header-items-container{
-        padding: 0 4rem 0 4rem;
+        padding: 0 4rem 0 3rem;
     }
     .header-logo{
         width: 10rem;
     }
-    .section{
+    .description-section{
         min-height: 80%;
         flex-direction: column;
         justify-content: space-between;
@@ -171,6 +191,9 @@
     .header-items-container{
         padding: 0 2rem 0 1.2rem;
     }
+    .header-items{
+        font-size: .95em;
+    }
     .header-items li:first-child{
         display: none;
     }
@@ -187,22 +210,28 @@
         border-bottom-right-radius: .5rem;
     }
     .header-items{
-        flex-direction: column;
-        gap: .7rem 0;
-        font-size: .84em;
+        column-gap: 1rem;   
     }
-    .header-logo{
-        width: 9.5rem;
-        max-height: 4.5rem;
+    .header-logo{   
+        width: 7rem;
+        max-height: 4rem;
     }
-    .section{
+    .description-section{
         padding: 0 1rem 2rem 1rem;
+    }
+    .projects{
+        margin-bottom: 0;
+        padding-bottom: 7rem;
+    }
+    #gallery {
+        margin: 8rem 0 2rem 0;
     }
     .container-h1{
         font-size: 3.5em;
         margin: 0;
     }
     .container-description{
+        align-self: center;
         width: 90%;
         font-size: .8em;
         line-height: 1.3rem;
@@ -220,10 +249,9 @@
         width: 95%;
         height: 100vh;
         max-height: 50rem;
-        /* object-fit: cover;    */
     }
 }
-@media (max-width: 22rem) {
+@media (max-width: 21rem) {
     .header-items-container{
         padding: 0 .5rem 0 0;
     }
@@ -233,13 +261,13 @@
         font-size: .84em;
     }
     .header-logo{
-        width: 9.5rem;
+        width: 8rem;
         max-height: 4.5rem;
     }
     .projects-images{
         width: 90%;
     }
-    .section{
+    .description-section{
         padding: 0 1rem 4rem 1rem;
         height: 100%;
     }
@@ -251,5 +279,27 @@
         width: 100%;
         font-size: .75em;
         line-height: 1.1rem;
+    }
+}
+@media (min-width: 110rem) {
+    .header-items-container{
+        padding: 1rem 5rem;
+    }
+    .header-items{
+        column-gap: 2.2rem;
+        font-size: 1.2em;
+    }
+    .header-logo{
+        width: 13rem;
+    }
+    .clouds-bg{
+        top: -10rem;
+    }
+    #gallery {
+        margin: 10rem 0 4rem 0;
+        gap: 3rem 2rem;
+    }
+    .projects-images{
+        width: 26rem;
     }
 }

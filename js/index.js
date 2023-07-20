@@ -8,10 +8,26 @@ const closeBtn = document.querySelector('.btn-close');
 
 const closeBtnHandler = () => lightbox.classList.remove('isActive')
 
+// Shuffle an array randomly
+const shuffleArray = (array) => {
+    array.forEach(index => {
+        // Generate a random index within the valid range
+        const randomIndex = Math.floor(Math.random() * (index + 1));
+
+        // Swap the elements at the current and random indeces
+        // Destructuring assignment. 
+        [array[index], array[randomIndex]] = [array[randomIndex], array[index]];
+    });
+}
+
 const projects = [
         'projectOne.png', 'projectTwo.gif', 'projectThree.gif', 'projectFour.png', 
-        'projectOne.png', 'projectTwo.gif', 'projectThree.gif', 'projectFour.png'
+        'projectFive.png', 'projectSix.png', 'projectSeven.gif', 'projectEight.gif',
+        'projectNine.gif', 'projectTen.gif', 'projectEleven.gif', 'projectTwelve.gif',
+        'projectThirteen.gif', 'projectFourteen.gif', 'projectFifteen.gif', 'projectSixteen.gif'
     ];
+
+shuffleArray(projects);
 
 let imageElements = projects.map(img => `<img class="projects-images" src="./assets/${img}" loading="lazy">`)
 
