@@ -52,18 +52,18 @@
 }
 .projects{
     position: relative;
-    padding-bottom: 6rem;
+    padding-bottom: 1rem;
 }
 .clouds-bg{
     position: absolute;
-    top: -8rem;
+    top: -7rem;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
 }
 #gallery {
-    margin: 8rem 0 4rem 0;
+    margin: 7rem 0 9rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +74,6 @@
 @keyframes slideUp {
     from {
         opacity: 0;
-        scale: .5;
     }
 }
 .rotated {
@@ -120,7 +119,7 @@
     margin-top: 3rem;
     width: 100%;
     height: 90vh;
-    max-height: 50rem;
+    max-height: 60rem;
     object-fit: contain;   
     user-select: none;
     pointer-events: none;
@@ -134,22 +133,23 @@
 }
 .description-section{
     width: 100%;
-    height: auto;
     display: flex;
-    align-items: flex-start;
-    padding: 0 6rem 4rem 6rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 0 0;
 }
-.container-h1{
+.container-star{
     width: 60%;
-    font-size: 5em;
-    margin-right: 6rem;
+    margin: -11rem 0rem 0rem 0;
 }
 .container-description{
-    max-width: 30rem;
-    font-size: .92em;
+    max-width: 36rem;
+    font-size: .98em;
     line-height: 1.4rem;
-    align-self: flex-end; 
-    padding-top: 1.4rem;
+    align-self: start; 
+    text-align: end;
+    margin-right: 3rem;
+    padding: 0 0 0 3rem;
 }
 #showreel{
     width: 100%;
@@ -158,33 +158,151 @@
 .showreel-video{
     width: 100%;
 }
-footer{
-    height: 20vh;
+.footer{
+    height: 25vh;
     width: 100%;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.25em;
 }
-
+.footer-col{
+    width: 18.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    position: relative;
+}
+.footer-form{
+    margin: 0 .3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-email{
+    outline: none;
+    border: 0;
+    width: 17rem;
+    padding: .5rem .3rem;
+    border-bottom: 2px solid var(--secondary-color);
+    border-radius: .3rem;
+    margin-bottom: 1rem;
+}
+.input-email::placeholder {
+    color: var(--secondary-color);
+}
+.input-email:focus{
+    border: 0;
+    border-bottom: 2px solid var(--secondary-color);
+}
+.btn-send {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+.link-footer, .mail-link, .btn-send {
+    width: 7rem;
+    position: relative;
+    margin: auto;
+    transition: .4s ease;
+}
+.link-footer:hover, 
+.mail-link:hover,
+.btn-send:hover{
+    background: #F3BA0A;
+    color: #491FE5;
+}
+.link-footer::before, 
+.mail-link::before,
+.btn-send::before {
+    content: '';
+    position: absolute;
+    border: 2px solid var(--secondary-color);
+    transform: rotate(-2deg) translateY(-50%);
+    width: 100%;
+    top: 90%;
+    left: 0;
+}
+.link-footer:hover::before,
+.mail-link:hover::before,
+.btn-send:hover::before{
+    border: none;
+}
+.btn-send::before {
+    top: 72%;
+}
+.link-footer:first-child{
+    width: 7.8rem;
+}
+.mail-link::before{
+    top: 95%;
+    width: 95%;
+    transform: rotate(-1.5deg) translateY(-50%);
+    left: .2rem;
+}
+.mail-link{
+    width: 16.5rem;
+    margin-bottom: 2rem;
+}
+.btn-send{
+    width: 5rem;
+}
+#form-error{
+    color: var(--secondary-color);
+    font-size: .7em;
+    padding-bottom: .5rem;
+}
 @media (max-width: 76rem) {
     .header-items-container{
-        padding: 0 4rem 0 3rem;
+        padding: 0 2rem 0 4rem;
     }
     .header-logo{
         width: 10rem;
     }
     .description-section{
-        min-height: 80%;
+        height: auto;
         flex-direction: column;
         justify-content: space-between;
-        padding: 0 2rem 4rem 2rem;
+        padding: 0 2rem 2rem 0;
     }
-    .container-h1{
-        width: 80%;
-        margin: 0 0 0 3rem;
+    .container-star{
+        width: 90%;
+        padding: 1rem;
+        margin-bottom: 0;
     }
     .container-description{
         font-size: .9em;
         line-height: 1.3rem;
-        padding-top: 1rem;
         align-self: flex-end;
+    }
+    .footer{
+        padding: 1rem 2rem;
+        font-size: 1em;
+    }
+    .footer-col{
+        width: 13rem;
+    }
+    .input-email{
+        margin-left: 1rem;
+        width: 11.5rem;
+    }
+    .link-footer, .mail-link, .btn-send {
+        width: 5rem;
+    }
+    .link-footer:first-child{
+        width: 6rem;
+    }
+    .mail-link{
+        width: 12.5rem;
+    }
+    .btn-send{
+        font-size: 1em;
+        width: 4rem;
     }
 }
 @media (max-width: 52rem) {
@@ -197,11 +315,41 @@ footer{
     .header-items li:first-child{
         display: none;
     }
-    .container-h1{
-        width: 70%;
-        font-size: 4em;
+    .container-star{
+        width: 80%;
+        padding: 2rem 2rem 1rem 0;
+    }
+    .footer{
+        height: auto;
+        padding: 2rem 2rem;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem 0;
+    }
+    .footer-col{
+        gap: .4rem;
+        line-height: 1rem;
+    }
+    .footer-form{
+        width: auto;
         margin: 0;
     }
+    .input-email{
+        width: 14rem;
+        padding: .3rem .2rem;
+        margin-bottom: .5rem;
+    }
+    .btn-send{
+        margin-top: .5rem;
+        font-size: 1em;
+        width: 4.5rem;
+    }
+    .btn-send::before {
+        left: .2rem;
+    }
+    #showreel{
+        margin-top: 1rem;
+    } 
 }
 @media (max-width: 30rem) {
     .header-items-container{
@@ -217,22 +365,19 @@ footer{
         max-height: 4rem;
     }
     .description-section{
-        padding: 0 1rem 2rem 1rem;
+        padding: 4rem 0;
     }
     .projects{
         margin-bottom: 0;
         padding-bottom: 7rem;
     }
-    #gallery {
-        margin: 8rem 0 2rem 0;
-    }
-    .container-h1{
-        font-size: 3.5em;
-        margin: 0;
+    .container-star{
+        width: 100%;
+        padding: 2rem 2rem 1rem 0;
     }
     .container-description{
         align-self: center;
-        width: 90%;
+        width: 95%;
         font-size: .8em;
         line-height: 1.3rem;
     }
@@ -246,14 +391,13 @@ footer{
     }
     .lightbox .expanded-img{
         margin-top: 4rem;
-        width: 95%;
+        width: 100%;
         height: 100vh;
-        max-height: 50rem;
     }
 }
 @media (max-width: 21rem) {
     .header-items-container{
-        padding: 0 .5rem 0 0;
+        margin: 0 .5rem 0 0;
     }
     .header-items{
         flex-direction: column;
@@ -265,17 +409,20 @@ footer{
         max-height: 4.5rem;
     }
     .projects-images{
-        width: 90%;
+        width: 87%;
+    }
+    .projects{
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+    }
+    .container-star{
+        width: 100%;
+        padding: 2rem 1rem 1rem 0;
     }
     .description-section{
-        padding: 0 1rem 4rem 1rem;
-        height: 100%;
-    }
-    .container-h1{
-        font-size: 3em;
+        padding: 3rem 1rem 4rem 0;
     }
     .container-description{
-        align-self: flex-start;
         width: 100%;
         font-size: .75em;
         line-height: 1.1rem;

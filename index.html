@@ -8,34 +8,32 @@
     <!-- Primary Meta Tags -->
     <title>MARIANO JUAREZ - DESIGNER</title>
     <meta name="title" content="MARIANO JUAREZ - DESIGNER" />
-    <meta name="description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!" />
+    <meta name="description" content="Descubre el porfolio de Mariano Juarez, un diseñador que explora la distopía a través del arte visual 3D. Conoce sus proyectos de diseño gráfico, 3D y edición de video, y su estilo único." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://marianojuarez.com" />
     <meta property="og:title" content="MARIANO JUAREZ - DESIGNER" />
-    <meta property="og:description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!" />
-    <meta property="og:image" content="./assets/web.png" />
+    <meta property="og:description" content="Descubre el porfolio de Mariano Juarez, un diseñador que explora la distopía a través del arte visual 3D. Conoce sus proyectos de diseño gráfico, 3D y edición de video, y su estilo único." />
+    <meta property="og:image" content="./assets/imgPresentation.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://marianojuarez.com" />
     <meta property="twitter:title" content="MARIANO JUAREZ - DESIGNER" />
-    <meta property="twitter:description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!" />
-    <meta property="twitter:image" content="./assets/web.png" />
+    <meta property="twitter:description" content="Descubre el porfolio de Mariano Juarez, un diseñador que explora la distopía a través del arte visual 3D. Conoce sus proyectos de diseño gráfico, 3D y edición de video, y su estilo único." />
+    <meta property="twitter:image" content="./assets/imgPresentation.png" />
 
-    <title>MARIANO JUAREZ - DESIGNER</title>
-    <link rel="shortcut icon" href="/assets/icono.ico">
+    <link rel="shortcut icon" href="./assets/icon.ico">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <script defer src="./js/index.js"></script>
 </head>
 
-<body id="inicio">
-
+    <body id="inicio">
         <header class="header">
             <nav class="header-items-container">
-                <a href="#">
+                <a href="/">
                     <img 
                         class="header-logo"
                         src="./assets/logo.png" 
@@ -43,7 +41,7 @@
                     >
                 </a>
                 <ul class="header-items">
-                    <li><a class="link-hover" href="#">Inicio</a></li>
+                    <li><a class="link-hover" href="/">Inicio</a></li>
                     <li><a class="link-hover" href="#showreel">Showreel</a></li>
                     <li><a class="link-hover" href="#contacto">Contacto</a></li>
                 </ul>
@@ -53,7 +51,7 @@
         <main>
             <div class="projects">
                 <div class="contaniner-video">
-                    <video autoplay muted loop class="clouds-bg">
+                    <video autoplay muted loop class="clouds-bg" contolslist>
                         <source src="./assets/CloudsBg.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -72,16 +70,21 @@
             
             <section class="section">
                 <div class="description-section">
-                    <div class="container-h1">
-                        <h1 class="h1">I'm a graphic</h1>
-                        <span>Designer</span>
+                    <div class="container-star">
+                        <img 
+                            src="./assets/star.gif" 
+                            alt="Estrella amarrilla en movimiento"
+                            loading="lazy"
+                        >
                     </div>
                     <div class="container-description">
-                        <p>Mariano Juarez [b. 1993 Buenos Aires, Argentina] es un diseñador
-                            que trabaja en las áreas de Diseño gráfico, 3D, Edicion de Video y  Arte visual.
+                        <h1> 
+                            Mariano Juarez [b. 1993 Buenos Aires, Argentina] es un diseñador
+                            que trabaja en las áreas de Diseño gráfico, 3D, Edicion de Video y Arte visual. 
                             En constante aprendizaje utilizando los recursos de internet para poder adquirir 
                             nuevas herramientas y recursos.
-                            Enfocado en una estética distópica por medio del renderizado 3D.</p>
+                            Enfocado en una estética distópica por medio del renderizado 3D.
+                        </h1>
                     </div>
                 </div>
                 <div id="showreel">
@@ -89,22 +92,66 @@
                         controls
                         controlslist="nodownload"
                         loading="lazy"
-                        poster="./assets/web.png"
+                        poster="./assets/imgPresentation.png"
                         class="showreel-video">
                         <source src="./assets/Showreel.mp4" type="video/mp4">
                     </video>
                 </div>
             </section>
-    </main>
+        </main>
 
-        <footer>
-            <!-- LET'S CONNECT & START YOUR JOURNEY
-                 FOR PROJECT ENQUIRIES OR IF YOU JUST WANT A CHAT: input email 
-            -->
+        <footer id="contacto" class="footer">
+            <div class="footer-col">
+                <h2>Para consultas de proyectos</h2>
+                <form
+                    id="form"
+                    action="https://formsubmit.co/8fe17cb5841e8e25d9d9f7f3b3537bcb"
+                    method="POST"
+                    class="footer-form"
+                >
+                    <input
+                        id="email"
+                        type="email" 
+                        name="email" 
+                        placeholder="Email"
+                        class="input-email"
+                        required
+                    >
+                    <p id="form-error"></p>
+                    <button class="btn-send" type="submit">Enviar</button>
 
-                <!-- Mail derechos mariano juarez 2023 -->
-
-            <!-- redes en texto ig, linkedin, behance-->
+                    <input type="hidden" name="_next" value="https://marianojuarez.com">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </div>
+            <div class="footer-col">
+                <a href="mailto:mjrzfesta@gmail.com" class="mail-link">mjrzfesta@gmail.com</a>
+                <p>Mariano juarez © 2023</p>
+                <p>All rights reserved</p>
+            </div>
+            <div class="footer-col">
+                <a  class="link-footer"
+                    href="https://www.instagram.com/mjrzarchivo/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+                <a  class="link-footer"
+                    href="https://linkedin.com/in/marianojuarez" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    Linkedin
+                </a>
+                <a  class="link-footer"
+                    href="https://www.behance.net/juarezmariano" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    Behance
+                </a>
+            </div> 
         </footer>
     </body>
 </html>

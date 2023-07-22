@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-55?styles=16012');
 /* variables */
 :root {
-    --primary-color: #050505;
+    --primary-color: #491FE5;
     --secondary-color: #F3BA0A;
 
     /* typography */
@@ -11,15 +11,14 @@
 /* dark mode */ 
 @media (prefers-color-scheme: dark) {
     :root{
-        --primary-color: #050505;
-        /* --primary-color: #1f3eed; */
+        --primary-color: #491FE5;
         --secondary-color: #F3BA0A;
     }
 }
 /* high contrast */
 @media (prefers-contrast: high ) {
     :root{
-        --primary-color: black;
+        --primary-color: #3700ff;
         --secondary-color: yellow;
     }
 }
@@ -68,8 +67,8 @@ h1, h2, h3, h4, h5, h6, p, a, span, strong, i {
 }
 
 ::selection{
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 form, input , textarea, select, button, label {
